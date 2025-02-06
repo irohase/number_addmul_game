@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>数字ゲーム</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <h1>{{target}}</h1>
+    <form method="POST">
+    <table>
+        {% for i in range(6)%} 
+        <tr>
+            {% for j in range(6)%}
+                <td>
+                    <button type="submit" class="num-button" name="num" value="{{randombox[i][j]}},{{i}},{{j}}"
+                            style="background-color:{{button_color[i][j]}};">
+                    {{randombox[i][j]}}
+                    </button>
+                </td>
+            {%endfor%}
+        </tr>
+        {%endfor%}    
+    </table>
+    </form>
+
+</body>
